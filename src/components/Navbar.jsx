@@ -33,7 +33,9 @@ const Navbar = () => {
           <button onClick={toggleTheme} className={CSS.themeToggle}>
             {theme === 'light' ? '🌙' : '☀️'}
           </button>
-          <Button variant="primary" size="sm">Get Started</Button>
+          <a href="https://wa.me/92032148972" target="_blank" rel="noopener noreferrer">
+            <Button variant="primary" size="sm">WhatsApp</Button>
+          </a>
         </div>
       </div>
     </nav>

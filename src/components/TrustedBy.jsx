@@ -1,18 +1,18 @@
 import CSS from './TrustedBy.module.css';
 
 const logos = [
-  { name: 'TechFlow', icon: '💎' },
-  { name: 'CloudNet', icon: '🌌' },
-  { name: 'GlobalStream', icon: '🌐' },
-  { name: 'PureConnect', icon: '🔗' },
-  { name: 'VisionAI', icon: '🧠' },
+  { name: 'Sony', icon: '📺' },
+  { name: 'Samsung', icon: '📱' },
+  { name: 'Chromecast', icon: '🎬' },
+  { name: 'Fire TV Stick', icon: '🔥' },
+  { name: 'Thomson', icon: '🖥️' },
 ];
 
 const TrustedBy = () => {
   return (
     <div className={CSS.trusted}>
       <div className="container">
-        <p className={CSS.label}>Trusted by leading tech teams worldwide</p>
+        <p className={CSS.label}>Compatible with leading devices</p>
         <div className={CSS.logoGrid}>
           {logos.map((logo) => (
             <div key={logo.name} className={CSS.logoItem}>
