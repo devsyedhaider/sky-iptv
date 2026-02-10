@@ -52,7 +52,7 @@
 .actions {
   display: flex;
   justify-content: center;
-  gap: 24px;
+  gap: 32px;
 }
 
 @media (max-width: 768px) {
