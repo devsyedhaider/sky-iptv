@@ -16,7 +16,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`${CSS.navbar} ${isScrolled ? CSS.scrolled : ''} glass`}>
+    <nav className={`${CSS.navbar} ${isScrolled ? CSS.scrolled : ''}`}>
       <div className={`${CSS.container} container`}>
         <div className={CSS.logo}>
           <span className="gradient-text">SkyIPTV</span>
