@@ -34,7 +34,7 @@ const Navbar = () => {
             {theme === 'light' ? '🌙' : '☀️'}
           </button>
           <a href="https://wa.me/92032148972" target="_blank" rel="noopener noreferrer">
-            <Button variant="primary" size="sm">WhatsApp</Button>
+            <Button variant="primary" size="sm">Get Started</Button>
           </a>
         </div>
       </div>
