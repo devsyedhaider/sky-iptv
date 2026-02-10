@@ -1,0 +1,63 @@
+.section {
+  padding: 100px 0;
+  background: var(--bg-soft);
+}
+
+.title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 60px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+}
+
+.rating {
+  margin-bottom: 20px;
+}
+
+.text {
+  font-style: italic;
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: var(--text-main);
+  flex-grow: 1;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  background: var(--primary-gradient);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.userName {
+  font-size: 16px;
+}
+
+.role {
+  font-size: 14px;
+  color: var(--text-muted);
+}

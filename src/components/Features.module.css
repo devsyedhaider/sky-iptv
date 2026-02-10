@@ -1,0 +1,57 @@
+.features {
+  padding: 100px 0;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.title {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 18px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.featureCard {
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-smooth);
+}
+
+.featureCard:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-blue);
+}
+
+.icon {
+  font-size: 32px;
+  margin-bottom: 24px;
+  width: 60px;
+  height: 60px;
+  background: var(--bg-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+}
+
+.featureTitle {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.desc {
+  color: var(--text-muted);
+  font-size: 15px;
+}

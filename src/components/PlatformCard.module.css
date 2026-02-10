@@ -1,0 +1,49 @@
+.card {
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all var(--transition-smooth);
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: var(--primary-blue);
+  box-shadow: var(--card-shadow);
+}
+
+.icon {
+  font-size: 40px;
+  margin-bottom: 16px;
+  background: var(--bg-soft);
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  transition: var(--transition-fast);
+}
+
+.card:hover .icon {
+  background: var(--primary-gradient);
+  color: white;
+  transform: scale(1.1);
+}
+
+.name {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.downloadBtn {
+  width: 100%;
+  border: 1px solid var(--glass-border);
+}
+
+.card:hover .downloadBtn {
+  border-color: var(--primary-blue);
+  color: var(--primary-blue);
+}

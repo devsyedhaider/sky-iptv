@@ -1,0 +1,84 @@
+.pricing {
+  padding: 100px 0;
+  background: var(--bg-soft);
+}
+
+.title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 60px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.plan {
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all var(--transition-smooth);
+}
+
+.popular {
+  border: 2px solid var(--primary-blue);
+  transform: scale(1.05);
+}
+
+.badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary-gradient);
+  color: white;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.planName {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.price {
+  margin-bottom: 32px;
+}
+
+.amount {
+  font-size: 48px;
+  font-weight: 800;
+  font-family: 'Outfit', sans-serif;
+}
+
+.period {
+  color: var(--text-muted);
+}
+
+.featureList {
+  list-style: none;
+  margin-bottom: 32px;
+  flex-grow: 1;
+}
+
+.featureList li {
+  padding: 8px 0;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.btn {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .popular {
+    transform: none;
+  }
+}

@@ -1,0 +1,16 @@
+.platforms {
+  padding: 100px 0;
+  background: var(--bg-soft);
+}
+
+.title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 60px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
