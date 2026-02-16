@@ -2,50 +2,121 @@
   padding: 100px 0;
 }
 
+.subtitle {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 12px;
+}
+
 .title {
   text-align: center;
   font-size: 36px;
-  margin-bottom: 60px;
+  margin-bottom: 16px;
 }
 
+.desc {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 16px;
+  max-width: 520px;
+  margin: 0 auto 48px;
+  line-height: 1.7;
+}
+
+/* ═══ Tabs ═══ */
 .tabs {
   display: flex;
   justify-content: center;
-  gap: 16px;
-  margin-bottom: 60px;
+  gap: 10px;
+  margin-bottom: 50px;
   flex-wrap: wrap;
 }
 
 .tabBtn {
-  padding: 12px 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
   border-radius: var(--radius-full);
   font-weight: 600;
+  font-size: 14px;
+  font-family: inherit;
   background: var(--bg-soft);
   color: var(--text-muted);
-  transition: all var(--transition-fast);
+  border: 1px solid var(--glass-border);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
+}
+
+.tabBtn:hover {
+  color: var(--text-main);
+  border-color: var(--primary-blue);
+  background: var(--bg-soft);
+  transform: translateY(-2px);
 }
 
 .tabBtn.active {
   background: var(--primary-gradient);
   color: white;
-  box-shadow: var(--accent-glow);
+  border-color: transparent;
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.35);
+  transform: translateY(-2px);
 }
 
+.tabIcon {
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* ═══ Stepper ═══ */
 .stepper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
   position: relative;
 }
 
+/* ═══ Step Card ═══ */
 .stepItem {
   text-align: center;
-  padding: 40px;
-  background: var(--bg-soft);
+  padding: 36px 28px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-radius: var(--radius-lg);
   border: 1px solid var(--glass-border);
+  transition: all 0.3s ease;
+  position: relative;
 }
 
+.stepItem:hover {
+  transform: translateY(-6px);
+  border-color: var(--primary-blue);
+  box-shadow:
+    0 16px 32px -8px rgba(37, 99, 235, 0.15),
+    0 0 0 1px rgba(37, 99, 235, 0.08);
+}
+
+/* ── Note style ── */
+.noteItem {
+  border-color: rgba(250, 204, 21, 0.4);
+  background: rgba(250, 204, 21, 0.04);
+}
+
+.noteItem:hover {
+  border-color: rgba(250, 204, 21, 0.6);
+  box-shadow: 0 16px 32px -8px rgba(250, 204, 21, 0.12);
+}
+
+/* ── Step number circle ── */
 .number {
   width: 50px;
   height: 50px;
@@ -58,12 +129,129 @@
   font-size: 20px;
   font-weight: 800;
   margin: 0 auto 24px;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  transition: transform 0.3s ease;
 }
 
+.stepItem:hover .number {
+  transform: scale(1.1);
+}
+
+.noteNumber {
+  background: linear-gradient(135deg, #f59e0b, #facc15);
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+
+/* ── Step text ── */
 .stepTitle {
+  font-size: 18px;
+  font-weight: 700;
   margin-bottom: 12px;
 }
 
 .stepText {
   color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.stepText strong {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.stepText code {
+  background: var(--bg-soft);
+  border: 1px solid var(--glass-border);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-family: 'Courier New', monospace;
+  color: var(--primary-blue);
+}
+
+/* ═══ Step Images ═══ */
+.stepImages {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.stepImages a {
+  display: block;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+  transition: all 0.3s ease;
+  flex: 1 1 80px;
+  max-width: 140px;
+}
+
+.stepImages a:hover {
+  border-color: var(--primary-blue);
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.2);
+}
+
+.stepImg {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 16 / 10;
+  background: var(--bg-soft);
+}
+
+/* ═══ Global link style (used via className in JSX) ═══ */
+:global(.hiw-link) {
+  color: var(--primary-blue);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid transparent;
+}
+
+:global(.hiw-link:hover) {
+  border-bottom-color: var(--primary-blue);
+  color: var(--secondary-blue);
+}
+
+/* ═══ Responsive ═══ */
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 0;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .tabs {
+    gap: 8px;
+    margin-bottom: 36px;
+  }
+
+  .tabBtn {
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+
+  .tabIcon {
+    font-size: 14px;
+  }
+
+  .stepper {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .stepItem {
+    padding: 28px 20px;
+  }
+
+  .stepImages a {
+    max-width: 100px;
+  }
 }
