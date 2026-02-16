@@ -2,17 +2,56 @@ import Button from './Button';
 import CSS from './Pricing.module.css';
 
 const plans = [
-  { name: 'Free', price: '$0', features: ['1 Device', 'Standard Quality', 'Basic Support'], popular: false },
-  { name: 'Basic', price: '$9', features: ['3 Devices', 'HD Quality', 'Email Support'], popular: false },
-  { name: 'Pro', price: '$19', features: ['5 Devices', '4K Quality', 'Priority Support'], popular: true },
-  { name: 'Business', price: '$49', features: ['Unlimited', '8K Quality', '24/7 Support'], popular: false },
+  {
+    name: '1-Year',
+    price: '120$',
+    features: [
+      'Live Channel 10k+',
+      'Amazon Prime & Netflix Inclusive',
+      '50K+ Movies & Web Series',
+      'Up to 3 Devices',
+      'All Indian, Tamil & Telugu Content',
+    ],
+    popular: false,
+  },
+  {
+    name: '3-Years',
+    price: '180$',
+    features: [
+      'Live Channel 10k+',
+      'Amazon Prime & Netflix Inclusive',
+      '50k+ Movies & Web Series',
+      'Up to 4 Devices',
+      'All Indian, Tamil & Telugu Content',
+    ],
+    popular: true,
+  },
+  {
+    name: '5-Years',
+    price: '220$',
+    features: [
+      'Live Channel 10k+',
+      'Amazon Prime & Netflix Inclusive',
+      '50K+ Movies & Web Series',
+      'Up to 5 Devices',
+      'All Indian, Tamil & Telugu Content',
+    ],
+    popular: false,
+  },
 ];
 
 const Pricing = () => {
+  const scrollToContact = () => {
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+      contactForm.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className={CSS.pricing} id="pricing">
       <div className="container">
-        <h2 className={CSS.title}>Simple <span className="gradient-text">Pricing</span></h2>
+        <h2 className={CSS.title}>Choose Your <span className="gradient-text">Plan</span></h2>
         <div className={CSS.grid}>
           {plans.map((p) => (
             <div key={p.name} className={`${CSS.plan} glass ${p.popular ? CSS.popular : ''}`}>
@@ -20,12 +59,15 @@ const Pricing = () => {
               <h3 className={CSS.planName}>{p.name}</h3>
               <div className={CSS.price}>
                 <span className={CSS.amount}>{p.price}</span>
-                <span className={CSS.period}>/month</span>
               </div>
               <ul className={CSS.featureList}>
-                {p.features.map(f => <li key={f}>{f}</li>)}
+                {p.features.map(f => <li key={f}>✔ {f}</li>)}
               </ul>
-              <Button variant={p.popular ? 'primary' : 'outline'} className={CSS.btn}>
+              <Button 
+                variant={p.popular ? 'primary' : 'outline'} 
+                className={CSS.btn}
+                onClick={scrollToContact}
+              >
                 Choose {p.name}
               </Button>
             </div>

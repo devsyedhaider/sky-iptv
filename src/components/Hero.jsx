@@ -14,14 +14,15 @@ const Hero = () => {
       <div className={CSS.bgOverlay}></div>
       <div className={`${CSS.container} container`}>
         <div className={CSS.content}>
-          <h1 className={`${CSS.title} animate-slide-up`}>
-            SkyIPTV – Smart <span className="gradient-text">Screen Sharing</span> Across All Devices
+          <p className={`${CSS.badge} animate-slide-up`}>SKY IP TV</p>
+          <h1 className={`${CSS.title} animate-slide-up stagger-1`}>
+            ENTERTAINMENT <span className="gradient-text">ANYTIME, ANYWHERE</span>
           </h1>
-          <p className={`${CSS.subtitle} animate-slide-up stagger-1`}>
-            Experience seamless, high-definition screen sharing with ultra-low latency. 
-            Connect your phone, tablet, or laptop to any TV or monitor in seconds.
+          <p className={`${CSS.subtitle} animate-slide-up stagger-2`}>
+            Enjoy high-quality entertainment with the best IPTV services in USA.
+            We offer a wide variety of shows and channels for viewers in the USA, UK, Canada, UAE.
           </p>
-          <div className={`${CSS.actions} animate-slide-up stagger-2`}>
+          <div className={`${CSS.actions} animate-slide-up stagger-3`}>
             <Button variant="primary" size="lg">Free Trial</Button>
             <Button variant="dark" size="lg" onClick={scrollToPricing}>Let's Start</Button>
           </div>

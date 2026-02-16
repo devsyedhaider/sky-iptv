@@ -19,13 +19,24 @@ const Contact = () => {
             </div>
           </div>
           
-          <form id="contact-form" className={`${CSS.form} glass`}>
+          <form 
+            id="contact-form"
+            action="https://formsubmit.co/devalihaider86@gmail.com" 
+            method="POST" 
+            className={`${CSS.form} glass`}
+          >
+            {/* FormSubmit Configuration */}
+            <input type="hidden" name="_subject" value="New Contact Form Submission - SkyIPTV" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+
             <div className={CSS.row}>
-              <input type="text" placeholder="Full Name" required className={CSS.input} />
-              <input type="email" placeholder="Email Address" required className={CSS.input} />
+              <input type="text" name="name" placeholder="Full Name" required className={CSS.input} />
+              <input type="email" name="email" placeholder="Email Address" required className={CSS.input} />
             </div>
-            <textarea placeholder="Your Message" rows="5" required className={CSS.textarea}></textarea>
-            <Button variant="primary" size="lg" className={CSS.btn}>Send Message</Button>
+            <input type="tel" name="phone" placeholder="Phone Number" className={CSS.input} />
+            <textarea name="message" placeholder="Your Message" rows="5" required className={CSS.textarea}></textarea>
+            <Button variant="primary" size="lg" className={CSS.btn} type="submit">Send Message</Button>
           </form>
         </div>
       </div>
