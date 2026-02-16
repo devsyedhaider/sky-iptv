@@ -23,10 +23,10 @@ const Navbar = () => {
         </div>
         
         <div className={CSS.links}>
-          <a href="#features" className={CSS.link}>Features</a>
+          <a href="#download" className={CSS.link}>Downloads</a>
           <a href="#how-it-works" className={CSS.link}>How It Works</a>
           <a href="#pricing" className={CSS.link}>Pricing</a>
-          <a href="#about" className={CSS.link}>About</a>
+          <a href="#about" className={CSS.link}>Contact Us</a>
         </div>
 
         <div className={CSS.actions}>
