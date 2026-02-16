@@ -98,41 +98,25 @@
 /* ── Icon ── */
 .iconWrapper {
   position: relative;
-  width: 76px;
-  height: 76px;
+  width: 80px;
+  height: 80px;
   margin-bottom: 20px;
-}
-
-.iconBg {
-  position: absolute;
-  inset: 0;
-  border-radius: var(--radius-md);
-  background: var(--bg-soft);
-  border: 1px solid var(--glass-border);
-  transition: all 0.4s ease;
-}
-
-.card:hover .iconBg {
-  background: var(--primary-gradient);
-  border-color: transparent;
-  transform: rotate(6deg) scale(1.08);
-  box-shadow: 0 8px 24px -6px rgba(37, 99, 235, 0.4);
-}
-
-.icon {
-  position: relative;
-  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100%;
-  font-size: 36px;
-  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.card:hover .icon {
-  transform: scale(1.15);
+.iconImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+}
+
+.card:hover .iconImage {
+  transform: scale(1.18);
+  filter: drop-shadow(0 8px 16px rgba(37, 99, 235, 0.3));
 }
 
 /* ── Text ── */

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import CSS from './PlatformCard.module.css';
 
-const PlatformCard = ({ name, icon, description, downloadUrl, version, delay }) => {
+const PlatformCard = ({ name, image, description, downloadUrl, version, delay }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isPressed, setIsPressed] = useState(false);
 
@@ -28,8 +28,7 @@ const PlatformCard = ({ name, icon, description, downloadUrl, version, delay }) 
       {/* Card content */}
       <div className={CSS.cardInner}>
         <div className={CSS.iconWrapper}>
-          <div className={CSS.iconBg} />
-          <span className={CSS.icon}>{icon}</span>
+          <img src={image} alt={name} className={CSS.iconImage} />
         </div>
 
         <h3 className={CSS.name}>{name}</h3>
