@@ -3,73 +3,49 @@
   align-items: center;
   justify-content: center;
   font-weight: 600;
-  border-radius: var(--radius-full);
+  border-radius: 6px;
   transition: all var(--transition-fast);
-  gap: 8px;
+  gap: 5px;
   white-space: nowrap;
 }
 
 .primary {
-  background: var(--primary-gradient);
+  background: var(--primary-blue);
   color: white;
-  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4), var(--accent-glow);
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 .outline {
   background: transparent;
-  border: 2px solid var(--primary-blue);
+  border: 1px solid var(--primary-blue);
   color: var(--primary-blue);
 }
 
 .outline:hover {
   background: rgba(37, 99, 235, 0.05);
-  transform: translateY(-2px);
 }
 
 .dark {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  background: #0f172a;
   color: white;
-  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4), 
-              0 4px 12px rgba(118, 75, 162, 0.3);
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  position: relative;
-  overflow: hidden;
-  transition: all var(--transition-smooth);
-}
-
-.dark::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-  transition: left 0.5s;
-}
-
-.dark:hover::before {
-  left: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-weight: 500;
 }
 
 .dark:hover {
-  background: linear-gradient(135deg, #764ba2 0%, #667eea 50%, #f093fb 100%);
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5), 
-              0 8px 20px rgba(118, 75, 162, 0.4),
-              0 0 30px rgba(240, 147, 251, 0.3);
-  border-color: rgba(255, 255, 255, 0.4);
+  background: #1e293b;
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
 }
 
 .dark:active {
-  transform: translateY(-1px) scale(0.98);
+  transform: translateY(0);
 }
 
 .ghost {

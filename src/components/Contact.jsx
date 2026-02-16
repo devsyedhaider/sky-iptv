@@ -19,7 +19,7 @@ const Contact = () => {
             </div>
           </div>
           
-          <form className={`${CSS.form} glass`}>
+          <form id="contact-form" className={`${CSS.form} glass`}>
             <div className={CSS.row}>
               <input type="text" placeholder="Full Name" required className={CSS.input} />
               <input type="email" placeholder="Email Address" required className={CSS.input} />

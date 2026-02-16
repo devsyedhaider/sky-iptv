@@ -22,7 +22,7 @@ const Hero = () => {
             Connect your phone, tablet, or laptop to any TV or monitor in seconds.
           </p>
           <div className={`${CSS.actions} animate-slide-up stagger-2`}>
-            <Button variant="dark" size="lg">Free Trial</Button>
+            <Button variant="primary" size="lg">Free Trial</Button>
             <Button variant="dark" size="lg" onClick={scrollToPricing}>Let's Start</Button>
           </div>
         </div>
