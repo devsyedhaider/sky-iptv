@@ -15,6 +15,9 @@ const Footer = () => {
             <a href="#features">Features</a>
             <a href="#download">Downloads</a>
             <a href="#pricing">Pricing</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact Us</a>
+
           </div>
 
           <div className={CSS.linksGroup}>

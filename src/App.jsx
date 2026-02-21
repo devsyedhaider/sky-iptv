@@ -1,4 +1,5 @@
 import { ThemeProvider } from './context/ThemeContext';
+import { PlanProvider } from './context/PlanContext';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -18,7 +19,9 @@ function App() {
 
   return (
     <ThemeProvider>
-      <div className="app">
+      <PlanProvider>
+        <div className="app">
+
         <Navbar />
         <main>
           <Hero />
@@ -34,9 +37,11 @@ function App() {
         <Footer />
         <WhatsAppWidget />
       </div>
+      </PlanProvider>
     </ThemeProvider>
   );
 }
+
 
 
 export default App;

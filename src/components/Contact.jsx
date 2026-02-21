@@ -1,15 +1,22 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { usePlan } from '../context/PlanContext';
 import Button from './Button';
 import CSS from './Contact.module.css';
 
 const Contact = () => {
+  const { selectedPlan, setSelectedPlan } = usePlan();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
-    plan: '1-Year ($120)',
+    plan: selectedPlan,
     message: ''
   });
+
+  // Sync internal form state when global context changes
+  useEffect(() => {
+    setFormData(prev => ({ ...prev, plan: selectedPlan }));
+  }, [selectedPlan]);
   
   const [errors, setErrors] = useState({});
 
@@ -36,11 +43,17 @@ const Contact = () => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
     
+    // If user changes plan manualy, update global context too
+    if (name === 'plan') {
+      setSelectedPlan(value);
+    }
+    
     // Clear error when user types
     if (errors[name]) {
       setErrors(prev => ({ ...prev, [name]: null }));
     }
   };
+
 
   const handleSubmit = (e) => {
     if (!validate()) {
@@ -128,10 +141,12 @@ const Contact = () => {
               value={formData.plan} 
               onChange={handleChange}
             >
+              <option value="Free Trial (1-Day)">Free Trial - 1 Day</option>
               <option value="1-Year ($120)">1-Year Plan - $120</option>
               <option value="3-Years ($180)">3-Year Plan - $180</option>
               <option value="5-Years ($220)">5-Year Plan - $220</option>
             </select>
+
 
             <textarea 
               name="message" 

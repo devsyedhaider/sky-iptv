@@ -1,3 +1,4 @@
+import { usePlan } from '../context/PlanContext';
 import Button from './Button';
 import CSS from './Pricing.module.css';
 
@@ -5,6 +6,7 @@ const plans = [
   {
     name: '1-Year',
     price: '120$',
+    id: '1-Year ($120)',
     features: [
       'Live Channel 10k+',
       'Amazon Prime & Netflix Inclusive',
@@ -17,6 +19,7 @@ const plans = [
   {
     name: '3-Years',
     price: '180$',
+    id: '3-Years ($180)',
     features: [
       'Live Channel 10k+',
       'Amazon Prime & Netflix Inclusive',
@@ -29,6 +32,7 @@ const plans = [
   {
     name: '5-Years',
     price: '220$',
+    id: '5-Years ($220)',
     features: [
       'Live Channel 10k+',
       'Amazon Prime & Netflix Inclusive',
@@ -41,12 +45,7 @@ const plans = [
 ];
 
 const Pricing = () => {
-  const scrollToContact = () => {
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-      contactForm.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  const { setPlanAndScroll } = usePlan();
 
   return (
     <section className={CSS.pricing} id="pricing">
@@ -66,7 +65,7 @@ const Pricing = () => {
               <Button 
                 variant={p.popular ? 'primary' : 'outline'} 
                 className={CSS.btn}
-                onClick={scrollToContact}
+                onClick={() => setPlanAndScroll(p.id)}
               >
                 Choose {p.name}
               </Button>
