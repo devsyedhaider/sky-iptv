@@ -9,9 +9,12 @@ import Pricing from './components/Pricing';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import './styles/animations.css';
+import useScrollReveal from './hooks/useScrollReveal';
+import WhatsAppWidget from './components/WhatsAppWidget';
 
 function App() {
+  useScrollReveal();
+
   return (
     <ThemeProvider>
       <div className="app">
@@ -27,9 +30,11 @@ function App() {
           <Contact />
         </main>
         <Footer />
+        <WhatsAppWidget />
       </div>
     </ThemeProvider>
   );
 }
+
 
 export default App;

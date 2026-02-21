@@ -51,10 +51,10 @@ const Pricing = () => {
   return (
     <section className={CSS.pricing} id="pricing">
       <div className="container">
-        <h2 className={CSS.title}>Choose Your <span className="gradient-text">Plan</span></h2>
+        <h2 className={`${CSS.title} reveal`}>Choose Your <span className="gradient-text">Plan</span></h2>
         <div className={CSS.grid}>
-          {plans.map((p) => (
-            <div key={p.name} className={`${CSS.plan} glass ${p.popular ? CSS.popular : ''}`}>
+          {plans.map((p, i) => (
+            <div key={p.name} className={`${CSS.plan} glass ${p.popular ? CSS.popular : ''} reveal`} style={{ transitionDelay: `${i * 0.15}s` }}>
               {p.popular && <span className={CSS.badge}>Most Popular</span>}
               <h3 className={CSS.planName}>{p.name}</h3>
               <div className={CSS.price}>

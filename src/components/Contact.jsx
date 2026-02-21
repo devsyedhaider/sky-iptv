@@ -52,7 +52,7 @@ const Contact = () => {
   return (
     <section className={CSS.section} id="contact">
       <div className="container">
-        <div className={CSS.wrapper}>
+        <div className={`${CSS.wrapper} reveal`}>
           <div className={CSS.info}>
             <h2 className={CSS.title}>Get In Touch</h2>
             <p className={CSS.text}>
@@ -73,7 +73,7 @@ const Contact = () => {
             id="contact-form"
             action="https://formsubmit.co/devalihaider86@gmail.com" 
             method="POST" 
-            className={`${CSS.form} glass`}
+            className={`${CSS.form} glass reveal-right`}
             onSubmit={handleSubmit}
           >
             {/* FormSubmit Configuration */}
