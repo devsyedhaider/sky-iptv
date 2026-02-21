@@ -84,3 +84,22 @@
     text-align: center;
   }
 }
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .brand {
+    grid-column: span 1;
+    text-align: center;
+  }
+  .desc {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .linksGroup {
+    text-align: center;
+  }
+}
+

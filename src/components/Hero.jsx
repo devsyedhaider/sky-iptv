@@ -14,7 +14,7 @@ const Hero = () => {
       <div className={CSS.bgOverlay}></div>
       <div className={`${CSS.container} container`}>
         <div className={CSS.content}>
-          <p className={`${CSS.badge} animate-slide-up`}>SKY IP TV</p>
+          <p className={`${CSS.badge} animate-slide-up`}>SKY IPTV</p>
           <h1 className={`${CSS.title} animate-slide-up stagger-1`}>
             ENTERTAINMENT <span className="gradient-text">ANYTIME, ANYWHERE</span>
           </h1>

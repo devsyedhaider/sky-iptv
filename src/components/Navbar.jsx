@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
+import { HiMenu, HiX } from 'react-icons/hi';
 import { useTheme } from '../context/ThemeContext';
 import Button from './Button';
 import CSS from './Navbar.module.css';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
@@ -15,6 +17,15 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [isMenuOpen]);
+
+
   return (
     <nav className={`${CSS.navbar} ${isScrolled ? CSS.scrolled : ''}`}>
       <div className={`${CSS.container} container`}>
@@ -22,20 +33,28 @@ const Navbar = () => {
           <span className="gradient-text">SkyIPTV</span>
         </div>
         
-        <div className={CSS.links}>
-          <a href="#download" className={CSS.link}>Downloads</a>
-          <a href="#how-it-works" className={CSS.link}>How It Works</a>
-          <a href="#pricing" className={CSS.link}>Pricing</a>
-          <a href="#about" className={CSS.link}>Contact Us</a>
+        <div className={`${CSS.links} ${isMenuOpen ? CSS.menuActive : ''}`}>
+          <a href="#download" className={CSS.link} onClick={() => setIsMenuOpen(false)}>Downloads</a>
+          <a href="#how-it-works" className={CSS.link} onClick={() => setIsMenuOpen(false)}>How It Works</a>
+          <a href="#pricing" className={CSS.link} onClick={() => setIsMenuOpen(false)}>Pricing</a>
+          <a href="#contact" className={CSS.link} onClick={() => setIsMenuOpen(false)}>Contact Us</a>
+          <div className={CSS.mobileBtn}>
+            <a href="https://wa.me/92032148972" target="_blank" rel="noopener noreferrer">
+              <Button variant="primary" size="md">Get Started</Button>
+            </a>
+          </div>
         </div>
 
         <div className={CSS.actions}>
           <button onClick={toggleTheme} className={CSS.themeToggle}>
             {theme === 'light' ? '🌙' : '☀️'}
           </button>
-          <a href="https://wa.me/92032148972" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/92032148972" target="_blank" rel="noopener noreferrer" className={CSS.desktopBtn}>
             <Button variant="primary" size="sm">Get Started</Button>
           </a>
+          <button className={CSS.hamburger} onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            {isMenuOpen ? <HiX /> : <HiMenu />}
+          </button>
         </div>
       </div>
     </nav>

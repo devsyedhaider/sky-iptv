@@ -270,3 +270,8 @@
     font-size: 13px;
   }
 }
+@media (max-width: 480px) {
+  .cardInner {
+    padding: 24px 16px 20px;
+  }
+}

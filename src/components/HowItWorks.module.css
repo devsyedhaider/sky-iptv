@@ -255,3 +255,35 @@
     max-width: 100px;
   }
 }
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 24px;
+  }
+  .desc {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+  .tabs {
+    gap: 6px;
+  }
+  .tabBtn {
+    padding: 6px 12px;
+    font-size: 11px;
+    gap: 4px;
+  }
+  .stepItem {
+    padding: 24px 16px;
+  }
+  .number {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+  .stepTitle {
+    font-size: 16px;
+  }
+}
+
+
