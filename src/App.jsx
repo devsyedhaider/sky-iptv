@@ -1,6 +1,7 @@
 import { ThemeProvider } from './context/ThemeContext';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import About from './components/About';
 import TrustedBy from './components/TrustedBy';
 import Platforms from './components/Platforms';
 import HowItWorks from './components/HowItWorks';
@@ -22,6 +23,7 @@ function App() {
         <main>
           <Hero />
           <TrustedBy />
+          <About />
           <Platforms />
           <Features />
           <HowItWorks />

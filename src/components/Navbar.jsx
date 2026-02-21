@@ -34,6 +34,7 @@ const Navbar = () => {
         </div>
         
         <div className={`${CSS.links} ${isMenuOpen ? CSS.menuActive : ''}`}>
+          <a href="#about" className={CSS.link} onClick={() => setIsMenuOpen(false)}>About Us</a>
           <a href="#download" className={CSS.link} onClick={() => setIsMenuOpen(false)}>Downloads</a>
           <a href="#how-it-works" className={CSS.link} onClick={() => setIsMenuOpen(false)}>How It Works</a>
           <a href="#pricing" className={CSS.link} onClick={() => setIsMenuOpen(false)}>Pricing</a>
