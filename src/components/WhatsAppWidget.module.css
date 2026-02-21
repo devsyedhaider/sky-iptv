@@ -250,5 +250,26 @@
   .chatWindow {
     width: 280px;
     right: 0;
+    bottom: 75px;
+  }
+
+  .chatFooter {
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .chatFooter input {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
+  .sendBtn {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    font-size: 18px;
+    box-shadow: 0 2px 8px rgba(18, 140, 126, 0.3);
   }
 }
+
+
