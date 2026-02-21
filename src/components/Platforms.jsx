@@ -12,29 +12,29 @@ const platforms = [
   {
     name: 'Windows',
     image: windowImg,
-    description: 'Windows 10 & 11 supported',
-    downloadUrl: 'https://example.com/download/windows',
+    description: 'https://www.iptvsmarters.com/',
+    downloadUrl: '',
     version: 'v3.2.1',
   },
   {
     name: 'macOS',
     image: macImg,
     description: 'macOS Monterey & above',
-    downloadUrl: 'https://example.com/download/macos',
+    downloadUrl: 'https://www.iptvsmarters.com/download/?download=mac',
     version: 'v3.2.1',
   },
   {
     name: 'Android',
     image: androidImg,
     description: 'Android 8.0+ devices',
-    downloadUrl: 'https://example.com/download/android',
+    downloadUrl: 'https://www.iptvsmarters.com/iptv-smarters-4.0.3.apk?__cf_chl_tk=yAwLJhVHjipOcTV3luG3dshv2NEsezkliAP6l3WXfzk-1771665277-1.0.1.1-hVO_fe5aqqOBGKMGqWAYup7b6TbK9g4dn4JCg7XTWNU',
     version: 'v3.2.0',
   },
   {
     name: 'Firestick',
     image: amazonImg,
     description: 'All Fire TV editions',
-    downloadUrl: 'https://example.com/download/firestick',
+    downloadUrl: 'http://webtv.iptvsmarters.com/switchuser.php',
     version: 'v3.1.8',
   },
   {
@@ -48,7 +48,7 @@ const platforms = [
     name: 'iOS',
     image: iosImg,
     description: 'iPhone & iPad',
-    downloadUrl: 'https://example.com/download/ios',
+    downloadUrl: 'https://apps.apple.com/in/app/smarters-player-lite/id1628995509',
     version: 'v3.1.5',
   },
 ];
