@@ -9,6 +9,8 @@ const Footer = () => {
             <h3 className={CSS.logo}><span className="gradient-text">SkyIPTV</span></h3>
             <p className={CSS.desc}>We provide the best IPTV services across the globe. Enjoy premium content anytime, anywhere!</p>
           </div>
+
+
           
           <div className={CSS.linksGroup}>
             <h4>Product</h4>
