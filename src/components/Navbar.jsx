@@ -39,7 +39,7 @@ const Navbar = () => {
           <a href="#pricing" className={CSS.link} onClick={() => setIsMenuOpen(false)}>Pricing</a>
           <a href="#contact" className={CSS.link} onClick={() => setIsMenuOpen(false)}>Contact Us</a>
           <div className={CSS.mobileBtn}>
-            <a href="https://wa.me/92032148972" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/923214899572" target="_blank" rel="noopener noreferrer">
               <Button variant="primary" size="md">Get Started</Button>
             </a>
           </div>
@@ -49,7 +49,7 @@ const Navbar = () => {
           <button onClick={toggleTheme} className={CSS.themeToggle}>
             {theme === 'light' ? '🌙' : '☀️'}
           </button>
-          <a href="https://wa.me/92032148972" target="_blank" rel="noopener noreferrer" className={CSS.desktopBtn}>
+          <a href="https://wa.me/923214899572" target="_blank" rel="noopener noreferrer" className={CSS.desktopBtn}>
             <Button variant="primary" size="sm">Get Started</Button>
           </a>
           <button className={CSS.hamburger} onClick={() => setIsMenuOpen(!isMenuOpen)}>
