@@ -55,3 +55,20 @@
   color: var(--text-muted);
   font-size: 15px;
 }
+
+@media (max-width: 768px) {
+  .features {
+    padding: 60px 0;
+  }
+  .title {
+    font-size: 28px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .featureCard {
+    padding: 24px;
+  }
+}
+

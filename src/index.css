@@ -45,15 +45,21 @@ html {
   scroll-behavior: smooth;
 }
 
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+
 body {
   font-family: 'Poppins', 'Inter', sans-serif;
   background-color: var(--bg-color);
   color: var(--text-main);
   line-height: 1.6;
-  overflow-x: hidden;
   transition: background-color var(--transition-smooth), color var(--transition-smooth);
   font-weight: 400;
 }
+
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', 'Outfit', sans-serif;

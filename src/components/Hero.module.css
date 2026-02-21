@@ -66,7 +66,7 @@
 .actions {
   display: flex;
   justify-content: center;
-  gap: 32px;
+  gap: 15px;
 }
 
 .actions button {

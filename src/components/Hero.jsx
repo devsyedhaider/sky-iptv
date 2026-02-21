@@ -22,7 +22,7 @@ const Hero = () => {
             Enjoy high-quality entertainment with the best IPTV services in USA.
             We offer a wide variety of shows and channels for viewers in the USA, UK, Canada, UAE.
           </p>
-          <div className={`${CSS.actions} animate-slide-up stagger-3`}>
+          <div className={`${CSS.actions} animate-slide-up stagger-3 `}>
             <Button variant="primary" size="lg">Free Trial</Button>
             <Button variant="dark" size="lg" onClick={scrollToPricing}>Let's Start</Button>
           </div>
