@@ -61,7 +61,7 @@ const Contact = () => {
 
     try {
       // 1. Submit to FormSubmit via AJAX
-      const response = await fetch("https://formsubmit.co/ajax/zahidarslan256@gmail.com", {
+      const response = await fetch("https://formsubmit.co/ajax/ranaabdullah5678910.com", {
         method: "POST",
         headers: { 
             'Content-Type': 'application/json',
@@ -86,7 +86,7 @@ const Contact = () => {
           `Message: ${formData.message}`;
         
         // Using the number found in WhatsAppWidget.jsx
-        const whatsappUrl = `https://wa.me/92305439770?text=${whatsappMsg}`;
+        const whatsappUrl = `https://wa.me/923014476718?text=${whatsappMsg}`;
         
         // 3. Open WhatsApp in new tab
         window.open(whatsappUrl, '_blank');
