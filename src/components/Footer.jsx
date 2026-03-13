@@ -25,7 +25,7 @@ const Footer = () => {
           <div className={CSS.linksGroup}>
             <h4>Contact Us</h4>
             <a href="mailto:devalihaider86@gmail.com">devalihaider86@gmail.com</a>
-            <a href="tel:+13222332447">+1 (322) 233-2447</a>
+            <a href="tel:+13322332447">+1 (332) 233-2447</a>
           </div>
 
           <div className={CSS.linksGroup}>

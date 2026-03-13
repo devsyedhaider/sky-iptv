@@ -76,7 +76,7 @@ const Contact = () => {
           `Phone: ${formData.phone}\n` +
           `Reference Name: ${formData.referanceName}`;
         
-        const whatsappUrl = `https://wa.me/13222332447?text=${encodeURIComponent(messageText)}`;
+        const whatsappUrl = `https://wa.me/13322332447?text=${encodeURIComponent(messageText)}`;
         
         // 3. Open WhatsApp in new tab
         window.open(whatsappUrl, '_blank');
@@ -112,7 +112,7 @@ const Contact = () => {
               <span>📧</span> <a href="mailto:skyiptvdistributors@gmail.com">skyiptvdistributors@gmail.com</a>
             </div>
             <div className={CSS.contactItem}>
-              <span>📞</span> <a href="tel:+13222332447">+1 (322) 233-2447</a>
+              <span>📞</span> <a href="tel:+13322332447">+1 (332) 233-2447</a>
             </div>
             <div className={CSS.contactItem}>
               <span>📍</span> New York, USA

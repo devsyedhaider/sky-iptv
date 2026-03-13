@@ -28,7 +28,7 @@ const WhatsAppWidget = () => {
     e.preventDefault();
     if (!message.trim()) return;
     
-    const whatsappUrl = `https://wa.me/13222332447?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/13322332447?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
     setMessage('');
     setIsOpen(false);
