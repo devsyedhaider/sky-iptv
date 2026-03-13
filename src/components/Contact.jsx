@@ -71,13 +71,12 @@ const Contact = () => {
 
       if (response.ok) {
         // 2. Prepare WhatsApp message
-        const whatsappMsg = `New Registration from ${formData.name}!%0A` +
-          `Email: ${formData.email}%0A` +
-          `Phone: ${formData.phone}%0A` +
+        const messageText = `New Registration from ${formData.name}!\n` +
+          `Email: ${formData.email}\n` +
+          `Phone: ${formData.phone}\n` +
           `Reference Name: ${formData.referanceName}`;
         
-        // Using the number found in WhatsAppWidget.jsx
-        const whatsappUrl = `https://wa.me/13222332447?text=${whatsappMsg}`;
+        const whatsappUrl = `https://wa.me/13222332447?text=${encodeURIComponent(messageText)}`;
         
         // 3. Open WhatsApp in new tab
         window.open(whatsappUrl, '_blank');
