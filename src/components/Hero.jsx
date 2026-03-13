@@ -25,6 +25,12 @@ const Hero = () => {
             }}>
               Register Now
             </Button>
+            <Button variant="dark" size="lg" onClick={() => {
+              // Open the payment image from the public folder
+              window.open('/payment.png', '_blank');
+            }}>
+              Pay Now
+            </Button>
           </div>
 
 
