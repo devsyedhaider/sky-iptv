@@ -5,10 +5,11 @@
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  display: flex;
+  justify-content: space-between;
   gap: 60px;
   margin-bottom: 60px;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -42,11 +43,7 @@
   color: var(--primary-blue);
 }
 
-.addressText {
-  font-size: 14px;
-  color: var(--text-muted);
-  line-height: 1.6;
-}
+/* Removed unused addressText */
 
 .bottom {
   padding-top: 40px;
@@ -63,20 +60,13 @@
   gap: 20px;
 }
 
-.mapContainer {
-  margin-top: 8px;
-  border-radius: 8px;
-  overflow: hidden;
-  border: 1px solid var(--glass-border);
-}
+/* Removed unused mapContainer */
 
 @media (max-width: 768px) {
   .grid {
-    grid-template-columns: 1fr 1fr;
+    flex-direction: column;
     gap: 40px;
-  }
-  .brand {
-    grid-column: span 2;
+    text-align: center;
   }
   .bottom {
     flex-direction: column;
@@ -87,19 +77,11 @@
 
 @media (max-width: 480px) {
   .grid {
-    grid-template-columns: 1fr;
     gap: 32px;
-  }
-  .brand {
-    grid-column: span 1;
-    text-align: center;
-  }
-  .desc {
-    max-width: 100%;
-    margin: 0 auto;
   }
   .linksGroup {
     text-align: center;
+    width: 100%;
   }
 }
 

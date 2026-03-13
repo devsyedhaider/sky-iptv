@@ -10,8 +10,6 @@ const Footer = () => {
             <p className={CSS.desc}>We provide the best IPTV services across the globe. Enjoy premium content anytime, anywhere!</p>
           </div>
 
-
-          
           <div className={CSS.linksGroup}>
             <h4>Product</h4>
             <a href="#features">Features</a>
@@ -19,28 +17,6 @@ const Footer = () => {
             <a href="#pricing">Pricing</a>
             <a href="#about">About Us</a>
             <a href="#contact">Contact Us</a>
-
-          </div>
-
-          <div className={CSS.linksGroup}>
-            <h4>Contact Us</h4>
-            <a href="mailto:devalihaider86@gmail.com">devalihaider86@gmail.com</a>
-            <a href="tel:+13322332447">+1 (332) 233-2447</a>
-          </div>
-
-          <div className={CSS.linksGroup}>
-            <h4>Location</h4>
-            <div className={CSS.mapContainer}>
-              <iframe 
-                src="https://maps.google.com/maps?q=32-45+69th+St+New+York+USA&t=&z=13&ie=UTF8&iwloc=&output=embed" 
-                width="100%" 
-                height="150" 
-                style={{ border: 0, borderRadius: '8px' }} 
-                allowFullScreen="" 
-                loading="lazy" 
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
           </div>
         </div>
         

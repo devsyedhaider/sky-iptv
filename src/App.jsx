@@ -8,7 +8,7 @@ import Platforms from './components/Platforms';
 import HowItWorks from './components/HowItWorks';
 import Features from './components/Features';
 import Pricing from './components/Pricing';
-import Testimonials from './components/Testimonials';
+// import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import useScrollReveal from './hooks/useScrollReveal';
@@ -29,7 +29,7 @@ function App() {
           <About />
           <Platforms />
           <HowItWorks />
-          <Testimonials />
+          {/* <Testimonials /> */}
           <Contact />
         </main>
         <Footer />

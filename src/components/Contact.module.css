@@ -3,29 +3,11 @@
 }
 
 .wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 80px;
-  align-items: center;
-}
-
-.title {
-  font-size: 48px;
-  margin-bottom: 24px;
-}
-
-.text {
-  font-size: 18px;
-  color: var(--text-muted);
-  margin-bottom: 40px;
-}
-
-.contactItem {
-  margin-bottom: 16px;
-  font-weight: 600;
   display: flex;
-  gap: 12px;
+  justify-content: center;
 }
+
+/* Removed unused .title, .text, .contactItem */
 
 .form {
   padding: 40px;
@@ -33,6 +15,24 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  max-width: 600px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+
+.formTitle {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 8px;
+  color: var(--text-main);
+  font-weight: 700;
 }
 
 .row {
@@ -42,6 +42,7 @@
 }
 
 .input, .textarea {
+  width: 100%;
   padding: 16px;
   border-radius: var(--radius-md);
   border: 1px solid var(--glass-border);
@@ -49,6 +50,7 @@
   color: var(--text-main);
   font-family: inherit;
   transition: var(--transition-fast);
+  box-sizing: border-box;
 }
 
 .input:focus, .textarea:focus {
@@ -83,8 +85,7 @@
 .error {
   color: #ef4444; /* Tailwind red-500 */
   font-size: 12px;
-  margin-top: -15px;
-  margin-bottom: 5px;
+  margin-top: 2px;
   text-align: left;
 }
 
@@ -110,32 +111,18 @@
   .section {
     padding: 60px 0;
   }
-  .wrapper {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    text-align: center;
-  }
-  .title {
-    font-size: 36px;
-  }
-  .contactItem {
-    justify-content: center;
-  }
 }
 
 @media (max-width: 576px) {
+  .form {
+    padding: 30px 20px;
+  }
   .row {
     grid-template-columns: 1fr;
     gap: 15px;
   }
-  .form {
-    padding: 24px;
-  }
-  .title {
-    font-size: 32px;
-  }
-  .text {
-    font-size: 16px;
+  .formTitle {
+    font-size: 24px;
   }
 }
 

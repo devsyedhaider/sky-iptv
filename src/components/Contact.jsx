@@ -107,28 +107,12 @@ const Contact = () => {
     <section className={CSS.section} id="contact">
       <div className="container">
         <div className={`${CSS.wrapper} reveal`}>
-          <div className={CSS.info}>
-            <h2 className={CSS.title}>Get In Touch</h2>
-            <p className={CSS.text}>
-              Have questions or need support? Our team is here to help you get the most out of desiIptv.
-            </p>
-            <div className={CSS.contactItem}>
-              <span>📧</span> <a href="mailto:skyiptvdistributors@gmail.com">skyiptvdistributors@gmail.com</a>
-            </div>
-            <div className={CSS.contactItem}>
-              <span>📞</span> <a href="tel:+13322332447">+1 (332) 233-2447</a>
-            </div>
-            <div className={CSS.contactItem}>
-              <span>📍</span> New York, USA
-            </div>
-          </div>
-          
           <form 
             id="contact-form"
-            className={`${CSS.form} glass reveal-right`}
+            className={`${CSS.form} glass reveal`}
             onSubmit={handleSubmit}
           >
-
+            <h2 className={CSS.formTitle}>Register form</h2>
 
             <input 
               type="text" 
@@ -141,7 +125,7 @@ const Contact = () => {
             />
 
             <div className={CSS.row}>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
+              <div className={CSS.inputWrapper}>
                 <input 
                   type="email" 
                   name="email" 
@@ -154,7 +138,7 @@ const Contact = () => {
                 {errors.email && <span className={CSS.error}>{errors.email}</span>}
               </div>
 
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
+              <div className={CSS.inputWrapper}>
                 <input 
                   type="tel" 
                   name="phone" 
@@ -166,9 +150,6 @@ const Contact = () => {
                 {errors.phone && <span className={CSS.error}>{errors.phone}</span>}
               </div>
             </div>
-
-
-
 
             <input 
               type="text" 
