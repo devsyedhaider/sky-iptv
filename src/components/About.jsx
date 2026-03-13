@@ -11,7 +11,7 @@ const About = () => {
             <p className={CSS.subtitle}>Our Story</p>
             <h2 className={CSS.title}>Redefining <span className="gradient-text">Digital Entertainment</span></h2>
             <p className={CSS.text}>
-              SkyIPTV was born out of a simple vision: to provide high-quality, buffer-free entertainment for everyone, 
+              desiIptv was born out of a simple vision: to provide high-quality, buffer-free entertainment for everyone, 
               anywhere in the world. Since our inception, we've focused on leveraging cutting-edge server technology 
               to deliver a seamless viewing experience that rivals traditional cable.
             </p>

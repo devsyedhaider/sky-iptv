@@ -66,7 +66,7 @@ const WhatsAppWidget = () => {
                 <span className={CSS.onlineDot}></span>
               </div>
               <div className={CSS.headerText}>
-                <h4>SkyIPTV Support</h4>
+                <h4>desiIptv Support</h4>
                 <p>Typically replies in minutes</p>
               </div>
             </div>

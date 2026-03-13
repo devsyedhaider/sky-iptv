@@ -31,7 +31,7 @@ const Navbar = () => {
     <nav className={`${CSS.navbar} ${isScrolled ? CSS.scrolled : ''}`}>
       <div className={`${CSS.container} container`}>
         <div className={CSS.logo} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-          <span className="gradient-text">SkyIPTV</span>
+          <span className="gradient-text">desiIptv</span>
         </div>
         
         <div className={`${CSS.links} ${isMenuOpen ? CSS.menuActive : ''}`}>

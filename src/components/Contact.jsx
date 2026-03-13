@@ -106,7 +106,7 @@ const Contact = () => {
           <div className={CSS.info}>
             <h2 className={CSS.title}>Get In Touch</h2>
             <p className={CSS.text}>
-              Have questions or need support? Our team is here to help you get the most out of SkyIPTV.
+              Have questions or need support? Our team is here to help you get the most out of desiIptv.
             </p>
             <div className={CSS.contactItem}>
               <span>📧</span> <a href="mailto:skyiptvdistributors@gmail.com">skyiptvdistributors@gmail.com</a>

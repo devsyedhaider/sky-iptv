@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container">
         <div className={CSS.grid}>
           <div className={CSS.brand}>
-            <h3 className={CSS.logo}><span className="gradient-text">SkyIPTV</span></h3>
+            <h3 className={CSS.logo}><span className="gradient-text">desiIptv</span></h3>
             <p className={CSS.desc}>We provide the best IPTV services across the globe. Enjoy premium content anytime, anywhere!</p>
           </div>
 
@@ -45,7 +45,7 @@ const Footer = () => {
         </div>
         
         <div className={CSS.bottom}>
-          <p>© 2024 SkyIPTV. All rights reserved.</p>
+          <p>© 2024 desiIptv. All rights reserved.</p>
           <div className={CSS.socials}>
             <a href="#">Twitter</a>
             <a href="#">GitHub</a>

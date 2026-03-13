@@ -14,7 +14,7 @@ const Features = () => {
     <section className={CSS.features} id="features">
       <div className="container">
         <div className={`${CSS.header} reveal`}>
-          <h2 className={CSS.title}>Why Choose <span className="gradient-text">SkyIPTV</span></h2>
+          <h2 className={CSS.title}>Why Choose <span className="gradient-text">desiIptv</span></h2>
           <p className={CSS.subtitle}>The most advanced screen sharing technology at your fingertips.</p>
         </div>
         <div className={CSS.grid}>

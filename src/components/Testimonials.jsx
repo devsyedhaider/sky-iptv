@@ -1,7 +1,7 @@
 import CSS from './Testimonials.module.css';
 
 const testimonials = [
-  { name: 'John Doe', role: 'Software Engineer', text: 'SkyIPTV is the smoothest screen sharing app I have ever used. Minimal lag and zero setup hassle.', rating: 5 },
+  { name: 'John Doe', role: 'Software Engineer', text: 'desiIptv is the smoothest screen sharing app I have ever used. Minimal lag and zero setup hassle.', rating: 5 },
   { name: 'Sarah Smith', role: 'Designer', text: 'The interface is beautiful and works perfectly on my Mac and Samsung TV. Highly recommend!', rating: 5 },
   { name: 'Mike Ross', role: 'Remote Worker', text: 'Secure and fast. Essential for my daily meetings and presentations.', rating: 4 },
 ];
