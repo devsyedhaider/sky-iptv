@@ -3,7 +3,7 @@ import { PlanProvider } from './context/PlanContext';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
-import TrustedBy from './components/TrustedBy';
+
 import Platforms from './components/Platforms';
 import HowItWorks from './components/HowItWorks';
 import Features from './components/Features';
@@ -25,7 +25,7 @@ function App() {
         <Navbar />
         <main>
           <Hero />
-          <TrustedBy />
+
           <About />
           <Platforms />
           <HowItWorks />

@@ -54,18 +54,20 @@ const Contact = () => {
 
     try {
       // 1. Submit to FormSubmit via AJAX
-      const response = await fetch("https://formsubmit.co/ajax/skyiptvdistributors@gmail.com", {
+      const response = await fetch("https://formsubmit.co/ajax/@gmail.com", {
         method: "POST",
         headers: { 
             'Content-Type': 'application/json',
             'Accept': 'application/json'
         },
         body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          referanceName: formData.referanceName,
-          _subject: `New Registration Request`
+          "Full Name": formData.name,
+          "Email Address": formData.email,
+          "Phone": formData.phone,
+          "Reference Name": formData.referanceName,
+          "_subject": "New Registration Request",
+          "_captcha": "false",
+          "_template": "table"
         })
       });
 
@@ -124,10 +126,7 @@ const Contact = () => {
             className={`${CSS.form} glass reveal-right`}
             onSubmit={handleSubmit}
           >
-            {/* FormSubmit Configuration */}
-            <input type="hidden" name="_subject" value={`New Registration Request`} />
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_template" value="table" />
+
 
             <input 
               type="text" 
