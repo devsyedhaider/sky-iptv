@@ -9,14 +9,10 @@ const Contact = () => {
     name: '',
     email: '',
     phone: '',
-    plan: selectedPlan,
-    message: ''
+    referanceName: ''
   });
 
-  // Sync internal form state when global context changes
-  useEffect(() => {
-    setFormData(prev => ({ ...prev, plan: selectedPlan }));
-  }, [selectedPlan]);
+
   
   const [errors, setErrors] = useState({});
 
@@ -43,10 +39,7 @@ const Contact = () => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
     
-    // If user changes plan manualy, update global context too
-    if (name === 'plan') {
-      setSelectedPlan(value);
-    }
+
     
     // Clear error when user types
     if (errors[name]) {
@@ -71,19 +64,17 @@ const Contact = () => {
           name: formData.name,
           email: formData.email,
           phone: formData.phone,
-          plan: formData.plan,
-          message: formData.message,
-          _subject: `New Order Request - ${formData.plan}`
+          referanceName: formData.referanceName,
+          _subject: `New Registration Request`
         })
       });
 
       if (response.ok) {
         // 2. Prepare WhatsApp message
-        const whatsappMsg = `New Order from ${formData.name}!%0A` +
+        const whatsappMsg = `New Registration from ${formData.name}!%0A` +
           `Email: ${formData.email}%0A` +
           `Phone: ${formData.phone}%0A` +
-          `Plan: ${formData.plan}%0A` +
-          `Message: ${formData.message}`;
+          `Reference Name: ${formData.referanceName}`;
         
         // Using the number found in WhatsAppWidget.jsx
         const whatsappUrl = `https://wa.me/923014476718?text=${whatsappMsg}`;
@@ -96,8 +87,7 @@ const Contact = () => {
           name: '',
           email: '',
           phone: '',
-          plan: selectedPlan,
-          message: ''
+          referanceName: ''
         });
         
         alert('Thank you! Your request has been sent via email, and WhatsApp is opening for direct chat.');
@@ -136,13 +126,9 @@ const Contact = () => {
             onSubmit={handleSubmit}
           >
             {/* FormSubmit Configuration */}
-            <input type="hidden" name="_subject" value={`New Order Request - ${formData.plan}`} />
+            <input type="hidden" name="_subject" value={`New Registration Request`} />
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_template" value="table" />
-            
-            {/* Hidden input to include selected plan in standard form submission if needed, 
-                though <select> name="plan" handles it naturally. 
-                We might want to customize the subject line or add a hidden field for clarity. */}
 
             <input 
               type="text" 
@@ -181,28 +167,18 @@ const Contact = () => {
               </div>
             </div>
 
-            <select 
-              name="plan" 
-              className={CSS.select}
-              value={formData.plan} 
-              onChange={handleChange}
-            >
-              <option value="Free Trial (1-Day)">Free Trial - 1 Day</option>
-              <option value="1-Year ($120)">1-Year Plan - $120</option>
-              <option value="3-Years ($180)">3-Year Plan - $180</option>
-              <option value="5-Years ($220)">5-Year Plan - $220</option>
-            </select>
 
 
-            <textarea 
-              name="message" 
-              placeholder="Your Message" 
-              rows="5" 
+
+            <input 
+              type="text" 
+              name="referanceName" 
+              placeholder="Reference Name" 
               required 
-              className={CSS.textarea}
-              value={formData.message}
+              className={CSS.input}
+              value={formData.referanceName}
               onChange={handleChange}
-            ></textarea>
+            />
 
             <Button variant="primary" size="lg" className={CSS.btn} type="submit">Submit Request</Button>
           </form>

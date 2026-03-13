@@ -37,14 +37,14 @@ const Navbar = () => {
           <a href="#about" className={CSS.link} onClick={() => setIsMenuOpen(false)}>About Us</a>
           <a href="#download" className={CSS.link} onClick={() => setIsMenuOpen(false)}>Downloads</a>
           <a href="#how-it-works" className={CSS.link} onClick={() => setIsMenuOpen(false)}>How It Works</a>
-          <a href="#pricing" className={CSS.link} onClick={() => setIsMenuOpen(false)}>Pricing</a>
+
           <a href="#contact" className={CSS.link} onClick={() => setIsMenuOpen(false)}>Contact Us</a>
           <div className={CSS.mobileBtn} onClick={() => {
             setIsMenuOpen(false);
-            const pricing = document.getElementById('pricing');
-            if (pricing) pricing.scrollIntoView({ behavior: 'smooth' });
+            const contact = document.getElementById('contact');
+            if (contact) contact.scrollIntoView({ behavior: 'smooth' });
           }}>
-            <Button variant="primary" size="md">Get Started</Button>
+            <Button variant="primary" size="md">Register Now</Button>
           </div>
 
         </div>
@@ -54,10 +54,10 @@ const Navbar = () => {
             {theme === 'light' ? '🌙' : '☀️'}
           </button>
           <div className={CSS.desktopBtn} onClick={() => {
-            const pricing = document.getElementById('pricing');
-            if (pricing) pricing.scrollIntoView({ behavior: 'smooth' });
+            const contact = document.getElementById('contact');
+            if (contact) contact.scrollIntoView({ behavior: 'smooth' });
           }}>
-            <Button variant="primary" size="sm">Get Started</Button>
+            <Button variant="primary" size="sm">Register Now</Button>
           </div>
           <button className={CSS.hamburger} onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <HiX /> : <HiMenu />}

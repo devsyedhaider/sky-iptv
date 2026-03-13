@@ -19,14 +19,11 @@ const Hero = () => {
             We offer a wide variety of shows and channels for viewers in the USA, UK, Canada, UAE.
           </p>
           <div className={`${CSS.actions} animate-slide-up stagger-3 `}>
-            <Button variant="primary" size="lg" onClick={() => setPlanAndScroll('Free Trial (1-Day)')}>
-              Free Trial
-            </Button>
-            <Button variant="dark" size="lg" onClick={() => {
-              const pricing = document.getElementById('pricing');
-              if (pricing) pricing.scrollIntoView({ behavior: 'smooth' });
+            <Button variant="primary" size="lg" onClick={() => {
+              const contact = document.getElementById('contact');
+              if (contact) contact.scrollIntoView({ behavior: 'smooth' });
             }}>
-              Let's Start
+              Register Now
             </Button>
           </div>
 
