@@ -28,7 +28,6 @@ function App() {
           <TrustedBy />
           <About />
           <Platforms />
-          <Features />
           <HowItWorks />
           <Testimonials />
           <Contact />
