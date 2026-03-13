@@ -1,6 +1,7 @@
 import { usePlan } from '../context/PlanContext';
 import Button from './Button';
 import CSS from './Hero.module.css';
+import paymentImg from '../assets/payment.jpeg';
 
 const Hero = () => {
   const { setPlanAndScroll } = usePlan();
@@ -26,8 +27,7 @@ const Hero = () => {
               Register Now
             </Button>
             <Button variant="dark" size="lg" onClick={() => {
-              // Open the payment image from the public folder
-              window.open('/payment.png', '_blank');
+              window.open(paymentImg, '_blank');
             }}>
               Pay Now
             </Button>

@@ -3,6 +3,7 @@ import { HiMenu, HiX } from 'react-icons/hi';
 import { useTheme } from '../context/ThemeContext';
 import Button from './Button';
 import CSS from './Navbar.module.css';
+import paymentImg from '../assets/payment.jpeg';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -39,7 +40,7 @@ const Navbar = () => {
           <a href="#how-it-works" className={CSS.link} onClick={() => setIsMenuOpen(false)}>How It Works</a>
 
           <a href="#contact" className={CSS.link} onClick={() => setIsMenuOpen(false)}>Contact Us</a>
-          <div className={CSS.mobileBtn} style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+          <div className={CSS.mobileBtn}>
             <Button variant="primary" size="md" onClick={() => {
               setIsMenuOpen(false);
               const contact = document.getElementById('contact');
@@ -47,7 +48,7 @@ const Navbar = () => {
             }}>Register Now</Button>
             <Button variant="dark" size="md" onClick={() => {
               setIsMenuOpen(false);
-              window.open('/payment.png', '_blank');
+              window.open(paymentImg, '_blank');
             }}>Pay Now</Button>
           </div>
 
@@ -57,13 +58,13 @@ const Navbar = () => {
           <button onClick={toggleTheme} className={CSS.themeToggle}>
             {theme === 'light' ? '🌙' : '☀️'}
           </button>
-          <div className={CSS.desktopBtn} style={{ display: 'flex', gap: '8px' }}>
+          <div className={CSS.desktopBtn}>
             <Button variant="primary" size="sm" onClick={() => {
               const contact = document.getElementById('contact');
               if (contact) contact.scrollIntoView({ behavior: 'smooth' });
             }}>Register Now</Button>
             <Button variant="dark" size="sm" onClick={() => {
-              window.open('/payment.png', '_blank');
+              window.open(paymentImg, '_blank');
             }}>Pay Now</Button>
           </div>
           <button className={CSS.hamburger} onClick={() => setIsMenuOpen(!isMenuOpen)}>

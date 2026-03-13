@@ -155,7 +155,9 @@
   }
 
   .mobileBtn {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
     margin-top: 20px;
     width: 80%;
     cursor: pointer;
@@ -185,6 +187,9 @@
 
 .desktopBtn {
   cursor: pointer;
+  display: flex;
+  gap: 12px;
+  align-items: center;
 }
 
 .mobileBtn {
